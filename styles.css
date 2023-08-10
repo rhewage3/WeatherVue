@@ -72,6 +72,7 @@ button#change{
     padding: 4px 10px;
     border-radius: 20px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 div.info{
