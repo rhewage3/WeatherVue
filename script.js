@@ -58,6 +58,10 @@ document.body.addEventListener('click', ev =>{
     // console.log(ev);
     const li = ev.target;
     const {lat, lon, name} = li.dataset;
+    //saving the last searched place in localStorage
+    localStorage.setItem('lat',lat);
+    localStorage.setItem('lon',lon);
+    localStorage.setItem('name',name);
     if(!lat){
         return;
     }
@@ -65,7 +69,18 @@ document.body.addEventListener('click', ev =>{
 });
 
 
-document.getElementById('change').addEventListener('clic', () => {
+document.getElementById('change').addEventListener('click', () => {
     document.getElementById('weather').style.display= 'none';
     document.querySelector('form').style.display = 'block';
 });
+
+
+document.body.onload = () =>{
+    if(localStorage.getItem('lat')){
+        const lat = localStorage.getItem('lat');
+        const lon = localStorage.getItem('lon');
+        const name = localStorage.getItem('name');
+        showWeather(lat,lon,name);
+    }
+};
+

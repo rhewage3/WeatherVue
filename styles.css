@@ -63,6 +63,7 @@ ul li span{
 #city{
     color: #ff521f;
     margin-bottom: 10px;
+    font-size: 2rem;
 }
 
 button#change{
@@ -89,6 +90,10 @@ div.info h3{
     text-transform: uppercase;
 }
 
+#icon{
+    margin-bottom: -40px;
+}
+
 div.info .value{
     font-size: 2rem;
 }
@@ -96,4 +101,6 @@ div.info .value{
 div.info .value span{
     color: #888;
     font-size: .8rem;
+    display: inline-block;
+    margin-left: 3px;
 }
